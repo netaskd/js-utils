@@ -23,8 +23,8 @@ export function getAvatarURL({ avatarID, email, id }: {
     urlPrefix: 'https://abotars.jitsi.net/meeple/',
     urlSuffix: ''
 }) {
-    return getGravatarURL(email)
-        || generateAvatarURL(avatarID || id, urlPrefix, urlSuffix);
+    return generateAvatarURL(avatarID || id, urlPrefix, urlSuffix)
+        || getGravatarURL(email);
 }
 
 /**
